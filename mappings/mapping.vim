@@ -25,3 +25,11 @@ noremap <Leader>P "+p
 " MAC os binding for NERDTree
 nnoremap † <Esc> :NERDTreeToggle<CR> " ALT+T - toggle file
 nnoremap ƒ <Esc> :NERDTreeFind<CR>== " ALT+F reveal current file in nerdtree
+
+
+" Go debug
+autocmd FileType go          nnoremap <buffer> <F5> :GoDebugStart<CR>
+autocmd FileType go          nnoremap <buffer> <F4> :GoDebugBreakpoint<CR>
+autocmd FileType go          nnoremap <buffer> <F6> :GoDebugNext<CR>
+autocmd FileType go          nnoremap <buffer> <F7> :GoDebugContinue<CR>
+

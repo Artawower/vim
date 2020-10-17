@@ -7,4 +7,5 @@ source ~/.config/vim/plugin-configurations/indent-line.vim
 source ~/.config/vim/plugin-configurations/jedi.vim
 source ~/.config/vim/plugin-configurations/blamer.vim
 source ~/.config/vim/plugin-configurations/airline.vim
+source ~/.config/vim/plugin-configurations/fzf.vim
 
