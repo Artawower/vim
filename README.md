@@ -41,7 +41,7 @@ git clone https://github.com/Artawower/vim-configs.git
 cp ~/.config/vim/.vimrc ~/.vimrc
 ``````
 
-run `vim` and input `:PlugInstall`, also install dipendency for coc
+run `vim` and input `:PlugInstall`, also install dependency for coc
 ```bash
 :CocInstall coc-vetur
 :CocInstall coc-python
