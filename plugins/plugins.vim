@@ -16,6 +16,7 @@ Plug 'Yggdroot/indentLine' " Hightlighting for indents
 Plug 'tmhedberg/SimpylFold' " Simple folding blocks of code
 Plug 'SirVer/ultisnips' " Snippets
 Plug 'honza/vim-snippets' " snipets engine
+Plug 'wakatime/vim-wakatime' " Time checker for productivity increasing ;)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 
@@ -51,14 +52,14 @@ Plug 'curist/vim-angular-template'
 Plug 'burnettk/vim-angular'
 
 "*************************** VUE JS ***************************
-Plug 'posva/vim-vue'
+" Plug 'posva/vim-vue'
 
 " **************************** HTML ****************************
 Plug 'alvan/vim-closetag' " Automatic tag closing
 Plug 'mattn/emmet-vim' " Emmet, fast HTML inserting
 
 "*************************** GOLANG ***************************
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " Golang support
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'branch': 'master' } " Golang support
 
 "*************************** PYTHON ***************************
 Plug 'davidhalter/jedi-vim' " Autocomplete/syntax for python
@@ -93,5 +94,6 @@ Plug 'vim-airline/vim-airline-themes' " Themes for airlines
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'APZelos/blamer.nvim' " Show last editor of current line
 Plug 'tpope/vim-fugitive' " Usefull utility for working with git
+
 
 call plug#end()

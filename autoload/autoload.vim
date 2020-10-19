@@ -17,3 +17,10 @@ endif
 if (has("termguicolors"))
   set termguicolors
 endif
+
+
+augroup typescriptreact
+  au!
+  autocmd BufNewFile,BufRead *.tsx   set filetype=typescript
+  autocmd BufNewFile,BufRead *.jsx   set filetype=javascript
+augroup END
