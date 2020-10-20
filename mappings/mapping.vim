@@ -33,4 +33,6 @@ autocmd FileType go          nnoremap <buffer> <F4> :GoDebugBreakpoint<CR>
 autocmd FileType go          nnoremap <buffer> <F6> :GoDebugNext<CR>
 autocmd FileType go          nnoremap <buffer> <F7> :GoDebugContinue<CR>
 
-
+" Git 
+noremap gs <Esc> :Gstatus<CR> " Get git status
+noremap gc <Esc> :Gdiffsplit \| HEAD~1<CR> " Split git info for compare last commit
