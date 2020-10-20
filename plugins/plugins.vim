@@ -17,6 +17,15 @@ Plug 'tmhedberg/SimpylFold' " Simple folding blocks of code
 Plug 'SirVer/ultisnips' " Snippets
 Plug 'honza/vim-snippets' " snipets engine
 Plug 'wakatime/vim-wakatime' " Time checker for productivity increasing ;)
+Plug 'frazrepo/vim-rainbow' " Different color highlighting for brackets
+Plug 'tpope/vim-surround' " Helpful utility for sorround text`s blocks
+  Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" Async completion
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+ else
+  Plug 'Shougo/deoplete.nvim'
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 
@@ -47,6 +56,7 @@ Plug 'prettier/vim-prettier', {
 
 "************************* TYPESCRIPT *************************
 Plug 'Quramy/tsuquyomi'
+Plug 'rudism/deoplete-tsuquyomi'
 "***************************ANGULAR****************************
 Plug 'curist/vim-angular-template'
 Plug 'burnettk/vim-angular'

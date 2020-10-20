@@ -1,3 +1,4 @@
+source ~/.config/vim/plugin-configurations/deoplete.vim
 source ~/.config/vim/plugin-configurations/closetag.vim
 source ~/.config/vim/plugin-configurations/golang.vim
 source ~/.config/vim/plugin-configurations/prettier.vim
