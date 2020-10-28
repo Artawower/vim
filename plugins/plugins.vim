@@ -20,16 +20,17 @@ Plug 'wakatime/vim-wakatime' " Time checker for productivity increasing ;)
 Plug 'frazrepo/vim-rainbow' " Different color highlighting for brackets
 Plug 'tpope/vim-surround' " Helpful utility for sorround text`s blocks
 " Async completion
-if has('nvim')
-  Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-endif
+" if has('nvim')
+"    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+"    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 
 "      											LANGUAGES 
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plug 'puremourning/vimspector' " debuger for everything
 Plug 'sheerun/vim-polyglot' "Syntax highlighting for different languages
 Plug 'neoclide/coc.nvim' , { 'branch' : 'release' } " Amazing autocomplete/typing support for much languages
 
@@ -50,21 +51,23 @@ Plug 'prettier/vim-prettier', {
     \ 'python',
     \ 'html',
     \ 'swift' ] } " Good code autoformatting 
-" Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html', 'vue'] } " "
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'html', 'vue'] } " "
 
 "************************* TYPESCRIPT *************************
-Plug 'Quramy/tsuquyomi'
-Plug 'rudism/deoplete-tsuquyomi'
+" Plug 'Quramy/tsuquyomi'
+" Plug 'rudism/deoplete-tsuquyomi'
 "***************************ANGULAR****************************
 Plug 'curist/vim-angular-template'
 Plug 'burnettk/vim-angular'
-
+Plug 'iamcco/coc-angular'
 "*************************** VUE JS ***************************
 " Plug 'posva/vim-vue'
-
+" Plug 'storyn26383/vim-vue'
+Plug 'leafOfTree/vim-vue-plugin'
 " **************************** HTML ****************************
 Plug 'alvan/vim-closetag' " Automatic tag closing
 Plug 'mattn/emmet-vim' " Emmet, fast HTML inserting
+Plug 'digitaltoad/vim-pug' " Pug syntax
 
 "*************************** GOLANG ***************************
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries', 'branch': 'master' } " Golang support
@@ -102,6 +105,7 @@ Plug 'vim-airline/vim-airline-themes' " Themes for airlines
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'APZelos/blamer.nvim' " Show last editor of current line
 Plug 'tpope/vim-fugitive' " Usefull utility for working with git
+Plug 'airblade/vim-gitgutter' " Jumping between changes
 
 
 call plug#end()

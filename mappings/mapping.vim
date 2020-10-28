@@ -1,6 +1,8 @@
 " Resize pane
 noremap <silent> <C-S-Left> :vertical resize -5<CR>
 noremap <silent> <C-S-Right> :vertical resize +5<CR>
+noremap <silent> <C-S-Up> :resize -5<CR>
+noremap <silent> <C-S-Down> :resize +5<CR>
 
 " Save file like VsCode
 noremap <silent> <C-S> :update<CR>
@@ -35,4 +37,4 @@ autocmd FileType go          nnoremap <buffer> <F7> :GoDebugContinue<CR>
 
 " Git 
 noremap gs <Esc> :Gstatus<CR> " Get git status
-noremap gc <Esc> :Gdiffsplit \| HEAD~1<CR> " Split git info for compare last commit
+noremap gl <Esc> :Gdiffsplit \| HEAD~1<CR> " Split git info for compare last commit

@@ -1,6 +1,6 @@
 filetype plugin indent on
 set encoding=UTF-8
-
+set viminfo='1000,f1 " Preserve marks (upper case/number only, see https://stackoverflow.com/questions/8958047/in-vim-is-there-a-way-to-save-bookmarks-between-sessions)
 " Folding configs
 " set foldmethod=syntax
 set foldnestmax=5

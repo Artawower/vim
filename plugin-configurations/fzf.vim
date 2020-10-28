@@ -15,3 +15,16 @@ let g:fzf_colors = { 'fg': ['fg', 'Normal'],
                 \ 'spinner': ['fg', 'Label'], 
                 \ 'header': ['fg', 'Comment'] }
 
+" noremap <silent> <Leader>ag :Ag <C-R><C-W><CR>
+
+function! FzfTagsCurrentWord()
+  let l:word = expand('<cword>')
+  let l:list = taglist(l:word)
+  if len(l:list) == 1
+    execute ':tag ' . l:word
+  else
+    call fzf#vim#tags(l:word)
+  endif
+endfunction
+
+noremap <c-]> :call FzfTagsCurrentWord()<cr>
