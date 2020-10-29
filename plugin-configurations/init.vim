@@ -12,5 +12,6 @@ source ~/.config/vim/plugin-configurations/airline.vim
 source ~/.config/vim/plugin-configurations/fzf.vim
 source ~/.config/vim/plugin-configurations/coc.vim
 source ~/.config/vim/plugin-configurations/polyglot.vim
+source ~/.config/vim/plugin-configurations/vim-signratures.vim
 
 

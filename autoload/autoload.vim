@@ -71,3 +71,23 @@ func! DeleteCurBufferNotCloseWindow() abort
 
 
   let g:polyglot_disabled = ['vue']
+
+
+" Prettier toggling
+""" Toggle vim-prettier auto formatting with <Leader>pr
+nnoremap <leader>pr :call TogglePrettier()<cr>
+
+" enable autoformatting by default
+let g:prettier#autoformat=0 
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+function! TogglePrettier()
+    if g:prettier#autoformat
+        let g:prettier#autoformat=0
+        autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+    else
+        let g:prettier#autoformat=1
+        autocmd! BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html call clearmatches()
+    endif
+endfunction
+

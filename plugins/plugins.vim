@@ -19,6 +19,7 @@ Plug 'honza/vim-snippets' " snipets engine
 Plug 'wakatime/vim-wakatime' " Time checker for productivity increasing ;)
 Plug 'frazrepo/vim-rainbow' " Different color highlighting for brackets
 Plug 'tpope/vim-surround' " Helpful utility for sorround text`s blocks
+Plug 'kshenoy/vim-signature' " Hightlight and visualisation for marks
 " Async completion
 " if has('nvim')
 "    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
