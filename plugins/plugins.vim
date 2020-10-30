@@ -64,7 +64,7 @@ Plug 'iamcco/coc-angular'
 "*************************** VUE JS ***************************
 " Plug 'posva/vim-vue'
 " Plug 'storyn26383/vim-vue'
-Plug 'leafOfTree/vim-vue-plugin'
+" Plug 'leafOfTree/vim-vue-plugin'
 " **************************** HTML ****************************
 Plug 'alvan/vim-closetag' " Automatic tag closing
 Plug 'mattn/emmet-vim' " Emmet, fast HTML inserting

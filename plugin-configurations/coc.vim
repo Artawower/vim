@@ -13,3 +13,6 @@ nmap <silent> gr <Plug>(coc-references)
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+
+autocmd BufWritePre *.go :call CocAction('organizeImport') " Missing import for golang

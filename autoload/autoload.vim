@@ -25,69 +25,49 @@ augroup typescriptreact
   autocmd BufNewFile,BufRead *.jsx   set filetype=javascript
 augroup END
 
-nnoremap <Leader>b :call DeleteCurBufferNotCloseWindow()<CR>
 
-" Preserve delete buffer not pane!
-func! DeleteCurBufferNotCloseWindow() abort
-    if &modified
-        echohl ErrorMsg
-        echom "E89: no write since last change"
-        echohl None
-    elseif winnr('$') == 1
-        bd
-    else  " multiple window
-        let oldbuf = bufnr('%')
-        let oldwin = winnr()
-        while 1   " all windows that display oldbuf will remain open
-            if buflisted(bufnr('#'))
-                b#
-            else
-                bn
-                let curbuf = bufnr('%')
-                if curbuf == oldbuf
-                    enew    " oldbuf is the only buffer, create one
-                endif
-            endif
-            let win = bufwinnr(oldbuf)
-            if win == -1
-                break
-            else        " there are other window that display oldbuf
-                exec win 'wincmd w'
-            endif
-        endwhile
-        " delete oldbuf and restore window to oldwin
-        exec oldbuf 'bd'
-        exec oldwin 'wincmd w'
-    endif
-  endfunc
+" Recover line position after return to buffer
+autocmd BufReadPost *
+ \ if line("'\"") > 0 && line("'\"") <= line("$") |
+ \   exe "normal! g`\"" |
+ \ endif
 
 
+let g:polyglot_disabled = ['javascript']
+ 
 
-  " Recover line position after return to buffer
-  autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
-
-
-  let g:polyglot_disabled = ['vue']
-
-
-" Prettier toggling
-""" Toggle vim-prettier auto formatting with <Leader>pr
-nnoremap <leader>pr :call TogglePrettier()<cr>
-
-" enable autoformatting by default
-let g:prettier#autoformat=0 
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-
-function! TogglePrettier()
-    if g:prettier#autoformat
-        let g:prettier#autoformat=0
-        autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-    else
-        let g:prettier#autoformat=1
-        autocmd! BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html call clearmatches()
-    endif
+" " Prettier toggling
+" """ Toggle vim-prettier auto formatting with <Leader>pr
+" nnoremap <leader>pr :call TogglePrettier()<cr>
+"
+" " enable autoformatting by default
+" let g:prettier#autoformat=0 
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+"
+" function! TogglePrettier()
+"     if g:prettier#autoformat
+"         let g:prettier#autoformat=0
+"         autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+"     else
+"         let g:prettier#autoformat=1
+"         autocmd! BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html call clearmatches()
+"     endif
+" endfunction
+"
+function! UseTabs()
+  set tabstop=4     " Size of a hard tabstop (ts).
+  set shiftwidth=4  " Size of an indentation (sw).
+  set noexpandtab   " Always uses tabs instead of space characters (noet).
+  set autoindent    " Copy indent from current line when starting a new line (ai).
 endfunction
 
+function! UseSpaces()
+  set tabstop=2     " Size of a hard tabstop (ts).
+  set shiftwidth=2  " Size of an indentation (sw).
+  set expandtab     " Always uses spaces instead of tab characters (et).
+  set softtabstop=0 " Number of spaces a <Tab> counts for. When 0, featuer is off (sts).
+  set autoindent    " Copy indent from current line when starting a new line.
+  set smarttab      " Inserts blanks on a <Tab> key (as per sw, ts and sts).
+endfunction
+
+call UseSpaces()

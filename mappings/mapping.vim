@@ -13,6 +13,9 @@ inoremap <silent> <C-S> <C-O>:update<CR>
 map gn :bn<cr>
 map gp :bp<cr>
 map gc :bd<cr>
+" Close buffer, preserve window
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
 
 nmap <silent> <C-p> :Files<CR> " Fast file opening for search
 
