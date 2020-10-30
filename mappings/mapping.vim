@@ -31,6 +31,9 @@ nnoremap † <Esc> :NERDTreeToggle<CR> " ALT+T - toggle file
 nnoremap ƒ <Esc> :NERDTreeFind<CR>== " ALT+F reveal current file in nerdtree
 nnoremap ø :NERDTree<CR>== " ALT+O open nerdtree 
 
+" FZF binding for file History
+noremap ˙ <Esc> :History<CR>
+
 
 " " Go debug
 autocmd FileType go          nnoremap <buffer> <F5> :GoDebugStart<CR>

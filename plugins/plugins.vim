@@ -108,7 +108,9 @@ Plug 'vim-airline/vim-airline-themes' " Themes for airlines
 Plug 'APZelos/blamer.nvim' " Show last editor of current line
 Plug 'tpope/vim-fugitive' " Usefull utility for working with git
 Plug 'airblade/vim-gitgutter' " Jumping between changes
-Plug 'tpope/vim-rhubarb' " Go to git file through browser
+Plug 'tpope/vim-rhubarb' " Go to github file through browser
+Plug 'tommcdo/vim-fubitive' " Go to bitbucket ghrough browser
+
 
 
 call plug#end()
