@@ -12,6 +12,6 @@ set directory=~/.vim/backup " Move .swp files to home directory
 set cursorline!
 " set synmaxcol=128
 set colorcolumn=120
-syntax sync minlines=256
+" syntax sync minlines=256
 syntax on
 let g:python3_host_prog = "/usr/local/bin/python3" " Path for python

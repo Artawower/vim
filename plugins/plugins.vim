@@ -20,6 +20,7 @@ Plug 'wakatime/vim-wakatime' " Time checker for productivity increasing ;)
 Plug 'frazrepo/vim-rainbow' " Different color highlighting for brackets
 Plug 'tpope/vim-surround' " Helpful utility for sorround text`s blocks
 Plug 'kshenoy/vim-signature' " Hightlight and visualisation for marks
+Plug 'wsdjeg/vim-todo' "Todo list
 " Async completion
 " if has('nvim')
 "    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -107,6 +108,7 @@ Plug 'vim-airline/vim-airline-themes' " Themes for airlines
 Plug 'APZelos/blamer.nvim' " Show last editor of current line
 Plug 'tpope/vim-fugitive' " Usefull utility for working with git
 Plug 'airblade/vim-gitgutter' " Jumping between changes
+Plug 'tpope/vim-rhubarb' " Go to git file through browser
 
 
 call plug#end()
